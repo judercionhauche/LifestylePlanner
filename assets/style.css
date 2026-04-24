@@ -1,0 +1,206 @@
+/* Post-Graduation Lifestyle Planner — Custom Streamlit Styles */
+
+/* ── Google Fonts (Inter) ─────────────────────────────────────────────────── */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* ── Root variables ────────────────────────────────────────────────────────── */
+:root {
+    --navy:       #1e3a5f;
+    --navy-light: #2c5282;
+    --green:      #27ae60;
+    --amber:      #f39c12;
+    --red:        #e74c3c;
+    --text:       #2d3748;
+    --text-muted: #718096;
+    --bg:         #f8fafc;
+    --card-bg:    #ffffff;
+    --border:     #e2e8f0;
+    --radius:     12px;
+    --shadow:     0 2px 8px rgba(0,0,0,0.08);
+}
+
+/* ── Global font ────────────────────────────────────────────────────────────── */
+html, body, [class*="css"] {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif !important;
+    color: var(--text);
+}
+
+/* ── Landing header ─────────────────────────────────────────────────────────── */
+.planner-header {
+    background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
+    color: white;
+    padding: 2.5rem 2rem 2rem;
+    border-radius: var(--radius);
+    margin-bottom: 1.5rem;
+}
+
+.planner-header h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 0 0 0.5rem 0;
+    color: white !important;
+}
+
+.planner-header .subtitle {
+    font-size: 1.05rem;
+    font-weight: 400;
+    opacity: 0.88;
+    margin: 0;
+    max-width: 680px;
+    line-height: 1.6;
+}
+
+/* ── Welcome panel ──────────────────────────────────────────────────────────── */
+.welcome-panel {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1.8rem 2rem;
+    margin: 1rem 0;
+}
+
+.welcome-panel h3 {
+    color: var(--navy);
+    font-size: 1.1rem;
+    margin-bottom: 0.8rem;
+}
+
+.welcome-panel ol {
+    padding-left: 1.2rem;
+    line-height: 2;
+    color: var(--text);
+}
+
+.welcome-panel p {
+    margin-top: 1rem;
+    color: var(--text-muted);
+    font-size: 0.93rem;
+    line-height: 1.7;
+}
+
+/* ── Sidebar ────────────────────────────────────────────────────────────────── */
+.sidebar-section-title {
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin: 0.5rem 0 0.25rem 0;
+}
+
+/* ── City cards ─────────────────────────────────────────────────────────────── */
+.city-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1.4rem 1.2rem 1.2rem;
+    box-shadow: var(--shadow);
+    transition: box-shadow 0.2s;
+    height: 100%;
+}
+
+.city-card:hover {
+    box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+}
+
+.card-city-name {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 0.5rem;
+}
+
+.card-score {
+    margin: 0.75rem 0;
+}
+
+.card-stats {
+    margin-top: 0.9rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+}
+
+.card-stats div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.88rem;
+}
+
+.stat-label {
+    color: var(--text-muted);
+    font-weight: 400;
+}
+
+.stat-value {
+    font-weight: 600;
+    color: var(--text);
+}
+
+/* ── Recommendation box ─────────────────────────────────────────────────────── */
+.recommendation-box {
+    background: #f0f5ff;
+    border-left: 4px solid var(--navy);
+    border-radius: 0 var(--radius) var(--radius) 0;
+    padding: 1rem 1.2rem;
+    margin: 0.75rem 0;
+    font-size: 0.97rem;
+    line-height: 1.75;
+    color: var(--text);
+}
+
+/* ── Streamlit component overrides ──────────────────────────────────────────── */
+div[data-testid="stButton"] > button[kind="primary"] {
+    background-color: var(--navy) !important;
+    border-color: var(--navy) !important;
+    font-weight: 600 !important;
+    border-radius: 8px !important;
+}
+
+div[data-testid="stButton"] > button[kind="primary"]:hover {
+    background-color: var(--navy-light) !important;
+    border-color: var(--navy-light) !important;
+}
+
+div[data-testid="stMetric"] {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1rem;
+    box-shadow: var(--shadow);
+}
+
+/* Tabs */
+.stTabs [data-baseweb="tab-list"] {
+    gap: 4px;
+}
+
+.stTabs [data-baseweb="tab"] {
+    border-radius: 8px 8px 0 0;
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+
+/* Dataframe header */
+div[data-testid="stDataFrame"] th {
+    background-color: var(--navy) !important;
+    color: white !important;
+    font-weight: 600 !important;
+    font-size: 0.82rem !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.04em !important;
+}
+
+/* Selectbox / multiselect */
+div[data-baseweb="select"] {
+    border-radius: 8px !important;
+}
+
+/* Section headers */
+h3 {
+    color: var(--navy) !important;
+    font-size: 1.15rem !important;
+    font-weight: 700 !important;
+    margin-top: 0.5rem !important;
+}
