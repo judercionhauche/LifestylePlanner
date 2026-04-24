@@ -143,7 +143,7 @@ def plot_budget_breakdown(budget: MonthlyBudget) -> go.Figure:
             dict(
                 text=f"Net<br><b>${budget.net_monthly:,.0f}</b>",
                 x=0.5, y=0.5,
-                font_size=14,
+                font=dict(size=14),
                 showarrow=False,
             )
         ],
