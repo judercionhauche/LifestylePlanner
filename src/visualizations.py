@@ -25,9 +25,8 @@ _LAYOUT_BASE = dict(
     margin=dict(t=50, l=0, r=10, b=20),
     hoverlabel=dict(
         bgcolor="#1e3a5f",
-        font_color="white",
-        font_family=_FONT_FAMILY,
-        bordercolor="transparent",
+        font=dict(color="white", family=_FONT_FAMILY),
+        bordercolor="#1e3a5f",
     ),
 )
 
