@@ -525,6 +525,14 @@ def main():
         "Data sources: Numbeo Cost of Living, US Census Bureau ACS 5-Year Estimates. "
         "Estimates are for planning purposes only. Consult a financial advisor for personalised advice."
     )
+    st.markdown(
+        '<div style="text-align:center;margin-top:8px;font-size:0.78rem;color:#718096;">'
+        "Built by <strong>Olivia</strong> &amp; <strong>Carina</strong> &mdash; "
+        '<a href="https://github.com/Soukypit/LifestylePlanner" target="_blank" '
+        'style="color:#1e3a5f;text-decoration:none;">GitHub</a>'
+        "</div>",
+        unsafe_allow_html=True,
+    )
 
 
 if __name__ == "__main__":
